@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { PieChartOutlined } from "@ant-design/icons";
 import type { MenuProps } from "antd";
 import { Breadcrumb, Layout, Menu, theme } from "antd";
+import Babosh from "./Header/Header-List"
+
 
 const { Header, Content, Footer, Sider } = Layout;
 
@@ -24,7 +26,7 @@ function getItem(
 const items: MenuItem[] = [
   getItem("Игры", "1", <PieChartOutlined />, [
     getItem("Все игры", "game1"),
-    getItem("Категори", "game2", undefined, [
+    getItem("Категории", "game2", undefined, [
       getItem("Новые игры", "3"),
       getItem("Популярное", "4"),
       getItem("Кено", "5"),
@@ -68,11 +70,10 @@ const App: React.FC = () => {
         />
       </Sider>
       <Layout>
-        <Header style={{ padding: 0, background: colorBgContainer }} />
+        <Header style={{ padding: 0 }}><Babosh /></Header>
         <Content style={{ margin: "0 16px" }}>
           <Breadcrumb
             style={{ margin: "16px 0" }}
-            items={[{ title: "User" }, { title: "Bill" }]}
           />
           <div
             style={{
