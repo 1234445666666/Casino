@@ -1,81 +1,94 @@
-import React from 'react';
-import { LaptopOutlined, NotificationOutlined, UserOutlined } from '@ant-design/icons';
-import type { MenuProps } from 'antd';
-import { Breadcrumb, Layout, Menu, theme } from 'antd';
+import React, { useState } from "react";
+import { PieChartOutlined } from "@ant-design/icons";
+import type { MenuProps } from "antd";
+import { Breadcrumb, Layout, Menu, theme } from "antd";
 
-const { Header, Content, Sider } = Layout;
+const { Header, Content, Footer, Sider } = Layout;
 
-const items1: MenuProps['items'] = ['1', '2', '3'].map((key) => ({
-  key,
-  label: `nav ${key}`,
-}));
+type MenuItem = Required<MenuProps>["items"][number];
 
-const items2: MenuProps['items'] = [UserOutlined, LaptopOutlined, NotificationOutlined].map(
-  (icon, index) => {
-    const key = String(index + 1);
+function getItem(
+  label: React.ReactNode,
+  key: React.Key,
+  icon?: React.ReactNode,
+  children?: MenuItem[]
+): MenuItem {
+  return {
+    key,
+    icon,
+    children,
+    label,
+  } as MenuItem;
+}
 
-    return {
-      key: `sub${key}`,
-      icon: React.createElement(icon),
-      label: `subnav ${key}`,
-      children: Array.from({ length: 4 }).map((_, j) => {
-        const subKey = index * 4 + j + 1;
-        return {
-          key: subKey,
-          label: `option${subKey}`,
-        };
-      }),
-    };
-  },
-);
+const items: MenuItem[] = [
+  getItem("Игры", "1", <PieChartOutlined />, [
+    getItem("Все игры", "game1"),
+    getItem("Категори", "game2", undefined, [
+      getItem("Новые игры", "3"),
+      getItem("Популярное", "4"),
+      getItem("Кено", "5"),
+      getItem("Настольные", "6"),
+      getItem("Лотерея", "7"),
+    ]),
+  ]),
+  getItem("Провайдеры", "prov", []),
+  getItem("Правила", "prav"),
+  getItem("Бонусная политика", "bonus"),
+  // getItem('Option 2', '2', <DesktopOutlined />),
+  // getItem('User', 'sub1', <UserOutlined />, [
+  //   getItem('Tom', '3'),
+  //   getItem('Bill', '4'),
+  //   getItem('Alex', '5'),
+  // ]),
+  // getItem('Team', 'sub2', <TeamOutlined />, [getItem('Team 1', '6'), getItem('Team 2', '8')]),
+  //баланс аккаунта
+  // getItem('TZEMNA', '9'),
+];
 
-const MenuLayout: React.FC = () => {
+const App: React.FC = () => {
+  const [collapsed, setCollapsed] = useState(false);
   const {
     token: { colorBgContainer, borderRadiusLG },
   } = theme.useToken();
 
   return (
-    <Layout>
-      <Header style={{ display: 'flex', alignItems: 'center' }}>
-        <div className="demo-logo" />
+    <Layout style={{ minHeight: "100vh" }}>
+      <Sider
+        collapsible
+        collapsed={collapsed}
+        onCollapse={(value) => setCollapsed(value)}
+      >
+        <div className="demo-logo-vertical" />
         <Menu
           theme="dark"
-          mode="horizontal"
-          defaultSelectedKeys={['2']}
-          items={items1}
-          style={{ flex: 1, minWidth: 0 }}
+          defaultSelectedKeys={["1"]}
+          mode="inline"
+          items={items}
         />
-      </Header>
+      </Sider>
       <Layout>
-        <Sider width={200} style={{ background: colorBgContainer }}>
-          <Menu
-            mode="inline"
-            defaultSelectedKeys={['1']}
-            defaultOpenKeys={['sub1']}
-            style={{ height: '100%', borderInlineEnd: 0 }}
-            items={items2}
-          />
-        </Sider>
-        <Layout style={{ padding: '0 24px 24px' }}>
+        <Header style={{ padding: 0, background: colorBgContainer }} />
+        <Content style={{ margin: "0 16px" }}>
           <Breadcrumb
-            items={[{ title: 'Home' }, { title: 'List' }, { title: 'App' }]}
-            style={{ margin: '16px 0' }}
+            style={{ margin: "16px 0" }}
+            items={[{ title: "User" }, { title: "Bill" }]}
           />
-          <Content
+          <div
             style={{
               padding: 24,
-              margin: 0,
-              minHeight: 280,
+              minHeight: 360,
               background: colorBgContainer,
               borderRadius: borderRadiusLG,
             }}
-          >
-            Content
-          </Content>
-        </Layout>
+          ></div>
+        </Content>
+        {/* <Footer style={{ textAlign: 'center' }}>
+          Ant Design ©{new Date().getFullYear()} Created by Ant UED
+        </Footer> */}
       </Layout>
     </Layout>
   );
 };
 
-export default MenuLayout;
+export default App;
