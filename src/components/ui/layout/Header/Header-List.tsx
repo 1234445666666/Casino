@@ -1,17 +1,15 @@
 import './Header-Style.scss';
+import { HeaderItems } from './Header-List';
 
-const Header = () => {
+export default function HeaderMenu() {
   return (
     <header className="header">
       <ul className="List">
-        <li>Игры</li>
-        <li>Поддержка</li>
-        <li>FAQ</li>
-        <li>Турниры</li>
-        <li>Джекпот</li>
+      {HeaderItems.map((item , index) => (
+        <li key={index}>{item}</li>
+      ))}
       </ul>
     </header>
   );
 };
 
-export default Header;
