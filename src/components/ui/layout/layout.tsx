@@ -2,10 +2,13 @@ import React, { useState } from "react";
 import { PieChartOutlined } from "@ant-design/icons";
 import type { MenuProps } from "antd";
 import { Breadcrumb, Layout, Menu, theme } from "antd";
-import HeaderMenu from "./Header/Header-List.tsx"
+import HeaderMenu from "./Header-Nav/Header-List.tsx"
+import LogoName from "./Header-Logo/Logo-Name.tsx"
+import HeaderInput from "./Header-Input/Header-Input.tsx"
+import "./layout.scss"
 
 
-const { Header, Content, Footer, Sider } = Layout;
+const { Header, Content, Sider } = Layout;
 
 type MenuItem = Required<MenuProps>["items"][number];
 
@@ -43,18 +46,16 @@ const items: MenuItem[] = [
 
 const App: React.FC = () => {
   const [collapsed, setCollapsed] = useState(false);
-  const {
-    token: { colorBgContainer, borderRadiusLG },
-  } = theme.useToken();
 
   return (
-    <Layout style={{ minHeight: "100vh" }}>
+    <Layout className="layout" >
       <Sider
         collapsible
         collapsed={collapsed}
         onCollapse={(value) => setCollapsed(value)}
       >
         <div className="demo-logo-vertical" />
+        <LogoName />
         <Menu
           theme="dark"
           defaultSelectedKeys={["1"]}
@@ -63,20 +64,14 @@ const App: React.FC = () => {
         />
       </Sider>
       <Layout>
-        <Header style={{ padding: 0 }}>
+        <Header className="header">
           <HeaderMenu />
+          <HeaderInput />
           </Header>
-        <Content style={{ margin: "0 16px" }}>
-          <Breadcrumb
-            style={{ margin: "16px 0" }}
+        <Content className="content"> 
+          <Breadcrumb className="breadcrumb"
           />
-          <div
-            style={{
-              padding: 24,
-              minHeight: 360,
-              background: colorBgContainer,
-              borderRadius: borderRadiusLG,
-            }}
+          <div className="site-layout-background" 
           ></div>
         </Content>
         {/* <Footer style={{ textAlign: 'center' }}>

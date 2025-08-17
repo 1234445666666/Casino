@@ -1,0 +1,30 @@
+.header {
+  padding: 0;
+  // height: 50%;
+  // width: 100wh;
+  // подобрать фон
+  background: #181A1B;
+}
+
+.nav {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+  padding: 0;
+  margin-left: 3rem;
+}
+
+.nav__link {
+  color: azure;
+
+  &:hover {
+    color: red;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+   display: block;
+   padding:1.5rem;
+  }
+}
