@@ -12,8 +12,9 @@ const handleSubmit = (event: React.FormEvent) => {
 };
 
 const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-  console.log(event.target.value);
+  // console.log(event.target.value);
 };
+
 
 return (
   <Form className="search" onFinish={handleSubmit}>

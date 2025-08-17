@@ -2,16 +2,26 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 15px;
+  margin-top: 35px;
+
 
   .search-input {
     width: 350px;
     margin-right: 5px;
+    border: 1 solid grey;
+    border-radius: 25px;
+    background: none;
+    color:white;
+
+    &::placeholder {
+      color: white;
+    }
   }
 
   .search-button {
-    border: 1px solid #d9d9d9;
+    border: 1px solid grey;
     margin-left: 5px;
+    color: wheat;
 
     &:hover {
       background-color: #1890ff;
