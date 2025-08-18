@@ -26,7 +26,7 @@ return (
           <Button
             className="search-button"
             type="text"
-            icon={<SearchOutlined />}
+            icon={<SearchOutlined className="search-icon" /> }
             htmlType="submit"
           />
         }

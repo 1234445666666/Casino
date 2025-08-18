@@ -1,7 +1,10 @@
+@import "../../../../styles/variables.scss";
+
 .slide-Container {
   width: 45%;
   margin: 2.9rem 0 0 9rem;
   text-align: center;
+  user-select: none;
 }
 
     .slide-1 {

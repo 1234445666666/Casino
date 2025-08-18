@@ -3,14 +3,14 @@ import { PieChartOutlined } from "@ant-design/icons";
 import type { MenuProps } from "antd";
 import { Breadcrumb, Layout, Menu, theme } from "antd";
 // import HeaderMenu from "./Header-Nav/Header-List.tsx";
-import LogoName from "./Header-Logo/Logo-Name.tsx";
+// import LogoName from "./Header-Logo/Logo-Name.tsx";
 import HeaderInput from "./Header-Input/Header-Input.tsx";
 import "./layout.scss";
 import Slider from "./Slider/Slider.tsx";
 
 
 //test
-import {HeaderMenu , LogoHeader} from "../../123/test"
+import { NavHeader , LogoHeader} from "../../123/test"
 
 const { Header, Content, Sider } = Layout;
 
@@ -59,7 +59,7 @@ const App: React.FC = () => {
         onCollapse={(value) => setCollapsed(value)}
       >
         <div className="demo-logo-vertical" />
-        {!collapsed && <LogoName />}
+        {!collapsed && <LogoHeader/>}
         <Menu
           theme="dark"
           defaultSelectedKeys={["1"]}
@@ -69,7 +69,7 @@ const App: React.FC = () => {
       </Sider>
       <Layout>
         <Header className="header">
-          <HeaderMenu />
+          <NavHeader />
           <HeaderInput />
         </Header>
         <Content className="content">
