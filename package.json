@@ -4,14 +4,13 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --host 0.0.0.0",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
     "@ant-design/icons": "^6.0.0",
-    "ant": "^0.0.0",
     "antd": "^5.27.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",

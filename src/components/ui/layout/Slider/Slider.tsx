@@ -6,7 +6,7 @@ export default function Slider() {
     <div className="slider">
       <div className="slide-Container">
         {/* true */}
-        <Carousel arrows infinite={false}>
+        <Carousel arrows infinite={true} autoplay>
           <div className="slide-1">
             <img
               src="https://i.pinimg.com/736x/c0/ef/53/c0ef53cb072f57a80ac83a5667104585.jpg"
