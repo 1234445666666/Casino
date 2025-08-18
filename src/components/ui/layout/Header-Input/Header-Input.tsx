@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { Button, Form, Input, Typography } from "antd";
 import "./Header-Input.scss";
 import { SearchOutlined } from "@ant-design/icons";
-import { mainPagesIndex } from "./App-Input.json";
 
 export default function AppInput() {
 

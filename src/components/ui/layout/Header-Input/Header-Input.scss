@@ -4,28 +4,31 @@
   align-items: center;
   margin-top: 35px;
 
-
   .search-input {
-    width: 350px;
-    margin-right: 5px;
-    border: 1 solid grey;
+    width: 300px;
+    margin-right: 6.875rem;
+    border: 1px solid grey;
     border-radius: 25px;
     background: none;
-    color:white;
+    color: white;
+
+    &:hover {
+      border: 1px solid white;
+    }
 
     &::placeholder {
-      color: white;
+      text-align: center;
+      color: yellow !important;
     }
   }
 
   .search-button {
-    border: 1px solid grey;
+    font-size: 20px;
     margin-left: 5px;
-    color: wheat;
+    color: white;
 
     &:hover {
-      background-color: #1890ff;
-      border: 1px solid #1890ff;
+      border: 1px solid white;
     }
   }
 
@@ -53,4 +56,3 @@
     }
   }
 }
-
