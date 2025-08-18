@@ -1,0 +1,54 @@
+.slide-Container {
+  width: 43%;
+  margin: 2.9rem 0 0 9rem;
+  text-align: center;
+}
+
+    .slide-1 {
+     border-radius: 10px;
+     height: 20rem;
+     background-color: cornflowerblue;
+    }
+
+    .slide-2 {
+     border-radius: 10px;
+     height: 20rem;
+     background-color: coral;
+    }
+
+    .slide-3 {
+     border-radius: 10px;
+     height: 20rem;
+     background-color: darkseagreen;
+    }
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  border-radius: 10px;
+}
+
+@media (max-width: 62rem) {
+  .slide-Container {
+    width: 20rem;
+  }
+}
+
+@media (max-width: 48rem) {
+  .slide-Container {
+    width: 18rem;
+  }
+}
+
+@media (max-width: 30rem) {
+  .slide-Container {
+    width: 10rem;
+  }
+}
+
+@media (max-width: 20rem) {
+  .search-input {
+    width: 8rem;
+  }
+}
