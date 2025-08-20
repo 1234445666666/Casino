@@ -13,7 +13,7 @@ export default function Profile() {
     setAnchorEl(null);
   };
   return (
-    <div>
+    <div className="profile">
       <IconButton
         size="large"
         aria-label="account of current user"

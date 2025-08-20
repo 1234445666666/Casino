@@ -93,11 +93,7 @@ export default function SimpleSliderBar() {
       )} */}
 
       <Drawer variant="permanent" open={open}>
-        <DrawerHeader>
-          <IconButton onClick={handleDrawerToggle}>
-            {open ? <ArrowBackIosNewIcon /> : <ArrowForwardIosIcon />}
-          </IconButton>
-        </DrawerHeader>
+      
 
         <Divider />
 
@@ -128,6 +124,11 @@ export default function SimpleSliderBar() {
             </ListItem>
           ))}
         </List>
+          <DrawerHeader>
+          <IconButton onClick={handleDrawerToggle}>
+            {open ? <ArrowBackIosNewIcon /> : <ArrowForwardIosIcon />}
+          </IconButton>
+        </DrawerHeader>
       </Drawer>
     </Box>
   );

@@ -1,5 +1,22 @@
 @use "@styles/variables";
 
+/// Here starts header and
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  padding: 0;
+  background: #181a1b;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  margin-right: 0.9375rem;
+}
+
 /// Here starts header-logo
 .logo__name {
   font-family: "Trajan Pro";
@@ -14,18 +31,12 @@
 }
 
 /// Here starts nav
-.header {
-  display: flex;
-  padding: 0;
-  background: #181a1b;
-}
-
 .nav {
   display: flex;
+  align-items: center;
   gap: 2.5rem;
   list-style: none;
   padding: 0;
-  margin-left: 3rem;
   user-select: none;
 }
 
@@ -40,64 +51,88 @@
 /// Here starts input
 .search {
   display: flex;
-  justify-content: center;
   align-items: center;
-  margin-top: 35px;
+  // background: rgba(255, 255, 255, 0.1); или
+  background-color: none;
+  border: 2px solid grey;
+  border-radius: 25px;
+  padding: 0 10px;
+  width: 18.75rem;
+  height: 2.2rem;
+  transition: border-color 0.3s ease;
 
-  .search-input {
-    width: 300px;
-    margin-right: 6.875rem;
-    border: 1px solid grey;
-    border-radius: 25px;
+  &:hover {
+    border: 1px solid white;
+  }
+
+  &:focus-within {
+    border-color: white;
+  }
+
+  .search__input {
+    flex: 1;
+    border: none;
     background: none;
     color: white;
-
-    input::placeholder {
-      color: white !important;
-    }
-
-    &:hover {
-      border: 1px solid white;
-    }
+    outline: none;
+    padding: 0 10px 0 0;
+    height: 100%;
 
     &::placeholder {
-      text-align: center;
-      color: yellow !important;
+      color: white;
+      opacity: 0.7;
     }
   }
 
-  .search-button {
-    font-size: 20px;
-    margin-left: 5px;
-  }
-
-  .search-icon {
+  .search__button {
+    border: none;
+    background: none;
     color: white;
-  }
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  /// Here starts adaptive
-  @media (max-width: 992px) {
-    .search-input {
-      width: 250px;
+    &:hover {
+      color: red;
     }
   }
+}
+//Here start profile
+.profile {
+  color: white;
 
-  @media (max-width: 768px) {
-    .search-input {
-      width: 200px;
-    }
+  &:hover {
+    color: rgb(165, 149, 120);
   }
+}
 
-  @media (max-width: 480px) {
-    .search-input {
-      width: 200px;
-    }
+/// Here starts adaptive
+@media (max-width: 992px) {
+  .search-input {
+    width: 250px;
   }
+}
 
-  @media (max-width: 320px) {
-    .search-input {
-      width: 100px;
-    }
+@media (max-width: 768px) {
+  .search-input {
+    width: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-input {
+    width: 200px;
+  }
+}
+
+@media (max-width: 320px) {
+  .search-input {
+    width: 100px;
   }
 }
 

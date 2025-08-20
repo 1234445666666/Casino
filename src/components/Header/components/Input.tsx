@@ -1,37 +1,26 @@
-// import React from "react";
-// import { Button, Form, Input } from "antd";
-// import "../header.style.scss";
-// import { SearchOutlined } from "@ant-design/icons";
+import React from "react";
+import "../header.style.scss";
 
-// export default function HeaderInput() {
+export default function HeaderInput() {
+  const handleSubmit = (event: React.FormEvent) => {
+    event.preventDefault();
+  };
 
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    // console.log(event.target.value);
+  };
 
-// const handleSubmit = (event: React.FormEvent) => {
-//   event.preventDefault();
-// };
-
-// const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-//   // console.log(event.target.value);
-// };
-
-
-// return (
-//   <Form className="search" onFinish={handleSubmit}>
-//     <Form.Item name="query">
-//       <Input
-//         onChange={handleChange}
-//         className="search-input"
-//         placeholder="Поиск..."
-//         suffix={
-//           <Button
-//             className="search-button"
-//             type="text"
-//             icon={<SearchOutlined className="search-icon" /> }
-//             htmlType="submit"
-//           />
-//         }
-//       />
-//     </Form.Item>
-//   </Form>
-// );
-// }
+  return (
+    <form className="search" onSubmit={handleSubmit}>
+      <input
+        type="text"
+        className="search__input"
+        placeholder="Поиск..."
+        onChange={handleChange}
+      />
+      <button type="submit" className="search__button">
+        <span className="search-icon">click</span>
+      </button>
+    </form>
+  );
+}
