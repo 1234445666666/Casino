@@ -1,9 +1,9 @@
-import React, { useEffect } from "react";
-import { Button, Form, Input, Typography } from "antd";
-import "./Header-Input.scss";
+import React from "react";
+import { Button, Form, Input } from "antd";
+import "../header.style.scss";
 import { SearchOutlined } from "@ant-design/icons";
 
-export default function AppInput() {
+export default function HeaderInput() {
 
 
 const handleSubmit = (event: React.FormEvent) => {
@@ -35,5 +35,3 @@ return (
   </Form>
 );
 }
-
-

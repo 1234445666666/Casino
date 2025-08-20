@@ -1,4 +1,4 @@
-import { HeaderItems } from "../ui/layout/Header-Nav/Header-List"
+import { HeaderItems } from "../ui/Header-Nav/Header-List"
 export function NavHeader() {
   return (
         <header className="header">

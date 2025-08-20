@@ -1,18 +1,14 @@
 import React, { useState } from "react";
 import { PieChartOutlined } from "@ant-design/icons";
 import type { MenuProps } from "antd";
-import { Breadcrumb, Layout, Menu, theme } from "antd";
-// import HeaderMenu from "./Header-Nav/Header-List.tsx";
-// import LogoName from "./Header-Logo/Logo-Name.tsx";
-import HeaderInput from "./Header-Input/Header-Input.tsx";
+import { Layout, Menu } from "antd";
 import "./layout.scss";
-import Slider from "./Slider/Slider.tsx";
-
-
+import Slider from "../Slider/Slider.tsx";
+import Header from "@components/Header/index.tsx";
 //test
-import { NavHeader , LogoHeader} from "../../123/test"
+// import { NavHeader, LogoHeader } from "../../123/test";
 
-const { Header, Content, Sider } = Layout;
+const { Content, Sider } = Layout;
 
 type MenuItem = Required<MenuProps>["items"][number];
 
@@ -53,13 +49,14 @@ const App: React.FC = () => {
 
   return (
     <Layout className="layout">
-      <Sider className="sider"
+      <Sider
+        className="sider"
         collapsible
         collapsed={collapsed}
         onCollapse={(value) => setCollapsed(value)}
       >
         <div className="demo-logo-vertical" />
-        {!collapsed && <LogoHeader/>}
+        {/* {!collapsed && </>} */}
         <Menu
           theme="dark"
           defaultSelectedKeys={["1"]}
@@ -68,10 +65,7 @@ const App: React.FC = () => {
         />
       </Sider>
       <Layout>
-        <Header className="header">
-          <NavHeader />
-          <HeaderInput />
-        </Header>
+        <Header />
         <Content className="content">
           {/* <Breadcrumb className="breadcrumb"
           /> */}

@@ -1,5 +1,42 @@
-@import "../../../../styles/variables.scss";
+@use "@styles/variables";
 
+/// Here starts header-logo
+.logo__name {
+  font-family: "Trajan Pro";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 28px;
+  text-align: center;
+  color: #ffffff;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+/// Here starts nav
+.header {
+  padding: 0;
+  background: #181a1b;
+}
+
+.nav {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+  padding: 0;
+  margin-left: 3rem;
+  user-select: none;
+}
+
+.nav__link {
+  color: azure;
+
+  &:hover {
+    color: red;
+  }
+}
+
+/// Here starts input
 .search {
   display: flex;
   justify-content: center;
@@ -14,8 +51,8 @@
     background: none;
     color: white;
 
-    input::placeholder{
-    color: white !important;
+    input::placeholder {
+      color: white !important;
     }
 
     &:hover {
@@ -37,6 +74,7 @@
     color: white;
   }
 
+  /// Here starts adaptive
   @media (max-width: 992px) {
     .search-input {
       width: 250px;
@@ -59,5 +97,12 @@
     .search-input {
       width: 100px;
     }
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    display: block;
+    padding: 1.5rem;
   }
 }
