@@ -61,6 +61,7 @@
   width: 18.75rem;
   height: 2.2rem;
   transition: border-color 0.3s ease;
+  overflow: hidden;
 
   &:hover {
     border: 1px solid white;
