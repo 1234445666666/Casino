@@ -2,7 +2,7 @@ import "./header.style.scss";
 import HeaderNav from "./components/Nav.tsx";
 import HeaderInput from "./components/Input.tsx";
 import Profile from "./components/Profile.tsx";
-/// Here starts menu
+
 export default function Header() {
   return (
     <header className="header">
