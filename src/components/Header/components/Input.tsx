@@ -1,6 +1,6 @@
 import React from "react";
 import "../header.style.scss";
-
+import SearchIcon from "@mui/icons-material/Search";
 export default function HeaderInput() {
   const handleSubmit = (event: React.FormEvent) => {
     event.preventDefault();
@@ -19,7 +19,9 @@ export default function HeaderInput() {
         onChange={handleChange}
       />
       <button type="submit" className="search__button">
-        <span className="search-icon">click</span>
+        <span className="search-icon">
+          <SearchIcon />
+        </span>
       </button>
     </form>
   );
