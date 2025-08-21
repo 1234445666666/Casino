@@ -60,6 +60,7 @@
   padding: 0 10px;
   width: 18.75rem;
   height: 2.2rem;
+  user-select: none;
   transition: border-color 0.3s ease;
   overflow: hidden;
 
@@ -100,10 +101,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
-    &:hover {
-      color: red;
-    }
   }
 }
 //Here start profile

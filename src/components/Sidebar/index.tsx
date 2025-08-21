@@ -19,7 +19,7 @@ import StarIcon from "@mui/icons-material/Star";
 import SupportIcon from "@mui/icons-material/Support";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import { Box } from "@mui/material";
-import HeaderLogo from '@components/Header/components/Logo'
+import HeaderLogo from "@components/Header/components/Logo";
 
 const drawerWidth = 240;
 
@@ -96,7 +96,7 @@ export default function SimpleSliderBar() {
       <Drawer variant="permanent" open={open}>
         <HeaderLogo />
         <Divider />
-          <DrawerHeader>
+        <DrawerHeader>
           <IconButton onClick={handleDrawerToggle}>
             {open ? <ArrowBackIosNewIcon /> : <ArrowForwardIosIcon />}
           </IconButton>
