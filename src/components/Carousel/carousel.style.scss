@@ -1,0 +1,25 @@
+// sx={{ maxWidth: 600, position: "relative" }}
+// sx={{
+//           width: "100%",
+//           height: "auto",
+//           display: "block",
+//           borderRadius: 2,
+//         }}
+
+.carousel {
+  position: relative;
+  width: 70rem;
+  height: 25rem;
+}
+
+.carousel__image {
+  display: block;
+  min-width: 100%;
+  height: 100%;
+  object-fit: fill;
+  border-radius: 10px;
+}
+
+.carousel__stepper {
+  position: static;
+}
