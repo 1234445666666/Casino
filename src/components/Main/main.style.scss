@@ -1,6 +1,12 @@
 .main {
-  &__container {
-    display: flex;
-    margin-left: 300px;
-  }
+  display: flex;
+  min-height: calc(100vh - 70px);
+  background-color: #181a1b;
+
+  .main__content {
+    flex-grow: 1;
+    padding: 20px;
+    margin-left: 20px;
+    width: calc(100% - 240px);
+ }
 }

@@ -102,7 +102,9 @@ export default function SimpleSliderBar() {
             </ListItem>
           ))}
         </List>
-        <DrawerHeader style={{ justifyContent: "right" , padding: 0 , marginTop: 620 ,  }}>
+        <DrawerHeader
+          style={{ justifyContent: "right", padding: 0, marginTop: 620 }}
+        >
           <IconButton onClick={handleDrawerToggle}>
             {open ? <ArrowBackIosNewIcon /> : <ArrowForwardIosIcon />}
           </IconButton>
