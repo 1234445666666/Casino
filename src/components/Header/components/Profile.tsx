@@ -3,6 +3,7 @@ import Menu from "@mui/material/Menu";
 import IconButton from "@mui/material/IconButton";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import React from "react";
+import { Link } from "react-router-dom";
 export default function Profile() {
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
   const handleMenu = (event: React.MouseEvent<HTMLElement>) => {
@@ -39,8 +40,8 @@ export default function Profile() {
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
-        <MenuItem onClick={handleClose}>Profile</MenuItem>
-        <MenuItem onClick={handleClose}>My account</MenuItem>
+        <MenuItem onClick={handleClose}> <Link to={"/profile"}>Profile</Link> </MenuItem>
+        <MenuItem onClick={handleClose}><Link to={"/support"}>My account</Link> </MenuItem>
       </Menu>
     </div>
   );

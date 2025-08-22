@@ -3,7 +3,7 @@
 /// Here starts header and
 .header {
   display: flex;
-  justify-content: space-between;
+  justify-content: right;
   align-items: center;
   height: 70px;
   padding: 0;
@@ -29,24 +29,12 @@
   color: #ffffff;
   margin-bottom: 10px;
   margin-top: 20px;
+  word-break: break-all;
 }
 
-// / Here starts nav
-.nav {
-  display: flex;
-  align-items: center;
-  gap: 2.5rem;
-  list-style: none;
-  padding: 0;
-  user-select: none;
-}
-
-.nav__link {
-  color: azure;
-
-  &:hover {
-    color: red;
-  }
+.logo__link {
+  text-decoration: none;
+  color: #ffffff;
 }
 
 /// Here starts input
