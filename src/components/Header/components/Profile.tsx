@@ -40,8 +40,8 @@ export default function Profile() {
         open={Boolean(anchorEl)}
         onClose={handleClose}
       >
-        <MenuItem onClick={handleClose}> <Link to={"/profile"}>Profile</Link> </MenuItem>
-        <MenuItem onClick={handleClose}><Link to={"/support"}>My account</Link> </MenuItem>
+        <MenuItem onClick={handleClose}> <Link className="profile__link" to={"/profile"}>Profile</Link> </MenuItem>
+        <MenuItem onClick={handleClose}><Link className="profile__link" to={"/support"}>My account</Link> </MenuItem>
       </Menu>
     </div>
   );

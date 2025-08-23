@@ -4,7 +4,7 @@ import Game from "../pages/Game";
 import MyProfile from "../pages/MyProfile";
 import Promotions from "../pages/Promotions.tsx";
 import Support from "../pages/Support";
-import Error from "../pages/Error";
+import Error from "../pages/Error/Error.tsx";
 
 export default function AppRoutes() {
   return (

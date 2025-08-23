@@ -7,24 +7,26 @@ import FormControl from "@mui/material/FormControl";
 import Select, { type SelectChangeEvent } from "@mui/material/Select";
 
 export default function currencySelection() {
-  const [currency, setCurrency] = React.useState("USD");
+  const [currency, setCurrency] = React.useState("RUB");
 
   const handleChange = (event: SelectChangeEvent) => {
     setCurrency(event.target.value as string);
   };
 
   return (
-    <Box sx={{ minWidth: 120 }}>
+    <Box className="currency">
       <FormControl>
-        <InputLabel>Currency</InputLabel>
+        <InputLabel>Валюта</InputLabel>
         <Select
           id="currencySelect"
+          size="small"
+          defaultValue="RUB"
           value={currency}
           label="currency"
           onChange={handleChange}
         >
-          <MenuItem value={"USD"}>USD</MenuItem>
           <MenuItem value={"RUB"}>RUB</MenuItem>
+          <MenuItem value={"USD"}>USD</MenuItem>
         </Select>
       </FormControl>
     </Box>

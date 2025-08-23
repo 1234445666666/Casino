@@ -93,7 +93,8 @@
   }
 }
 //Here start profile
-.profile {
+.profile__link {
+  text-decoration: none;
   color: white;
 
   &:hover {
@@ -101,34 +102,133 @@
   }
 }
 
+//Here start currency
+.currency {
+  min-width: 120px;
+  margin-top: 7px;
+}
+
 /// Here starts adaptive
-@media (max-width: 992px) {
-  .search-input {
-    width: 250px;
+@media (max-width: 1024px) {
+  .header {
+    padding-left: 20px;
+  }
+
+  .header__container {
+    gap: 1.5rem;
+  }
+
+  .search {
+    width: 15.75rem;
+    height: 2.2rem;
+  }
+
+  .currency {
+    min-width: 100px;
+  }
+
+  .profile__link {
+    font-size: 14px;
+  }
+
+  .search__input {
+    font-size: 14px;
+  }
+
+  .search__button {
+    font-size: 16px;
   }
 }
 
 @media (max-width: 768px) {
-  .search-input {
-    width: 200px;
+  .header {
+    padding-left: 20px;
+  }
+
+  .header__container {
+    gap: 1.5rem;
+  }
+
+  .search {
+    width: 15.75rem;
+    height: 2.2rem;
+  }
+
+  .currency {
+    min-width: 100px;
+  }
+
+  .profile__link {
+    font-size: 14px;
+  }
+
+  .search__input {
+    font-size: 14px;
+  }
+
+  .search__button {
+    font-size: 16px;
   }
 }
 
 @media (max-width: 480px) {
-  .search-input {
-    width: 200px;
+  .header {
+    padding-left: 20px;
+  }
+
+  .header__container {
+    gap: 1.5rem;
+  }
+
+  .search {
+    width: 15.75rem;
+    height: 2.2rem;
+  }
+
+  .currency {
+    min-width: 100px;
+  }
+
+  .profile__link {
+    font-size: 14px;
+  }
+
+  .search__input {
+    font-size: 14px;
+  }
+
+  .search__button {
+    font-size: 16px;
   }
 }
 
-@media (max-width: 320px) {
-  .search-input {
-    width: 100px;
+@media (max-width: 360px) {
+  .header {
+    padding-left: 20px;
   }
-}
 
-@media (max-width: 768px) {
-  .nav {
-    display: block;
-    padding: 1.5rem;
+  .header__container {
+    gap: 1.5rem;
+  }
+
+  .search {
+    width: 15.75rem;
+    height: 2.2rem;
+  }
+
+  .currency {
+    min-width: 100px;
+  }
+
+  .profile__link {
+    font-size: 14px;
+  }
+
+  .search__input {
+    font-size: 14px;
+  }
+
+  .search__button {
+    font-size: 16px;
   }
 }
