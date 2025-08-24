@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
-import HomePage from "../pages/Main";
-import Game from "../pages/Game";
+import HomePage from "../pages/Main-Page/Main-Page.tsx";
+import Game from "../pages/Game/Game.tsx";
 import MyProfile from "../pages/MyProfile";
 import Promotions from "../pages/Promotions.tsx";
 import Support from "../pages/Support";
